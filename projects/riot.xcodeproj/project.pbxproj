@@ -8,7 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		CD2B642B1589722600582E55 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD2B642A1589722600582E55 /* main.cpp */; };
+		CD58C3581589749A00CA73F4 /* liblae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD58C3521589749100CA73F4 /* liblae.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD58C3511589749100CA73F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD58C3461589749100CA73F4 /* lae.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDE73E57157EA81D000BE9C5;
+			remoteInfo = lae;
+		};
+		CD58C3531589749100CA73F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD58C3461589749100CA73F4 /* lae.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDE73E5F157EA82C000BE9C5;
+			remoteInfo = lae_test;
+		};
+		CD58C3551589749100CA73F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD58C3461589749100CA73F4 /* lae.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD9FBDAA157FD34900638766;
+			remoteInfo = lae_osx;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CDAC4498158971C80054812F /* CopyFiles */ = {
@@ -24,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		CD2B642A1589722600582E55 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CD58C3461589749100CA73F4 /* lae.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lae.xcodeproj; path = ../external/lae/projects/lae.xcodeproj; sourceTree = "<group>"; };
 		CDAC449A158971C80054812F /* riot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = riot; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD58C3581589749A00CA73F4 /* liblae.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,9 +74,20 @@
 			path = ../src;
 			sourceTree = "<group>";
 		};
+		CD58C3471589749100CA73F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD58C3521589749100CA73F4 /* liblae.a */,
+				CD58C3541589749100CA73F4 /* lae_test */,
+				CD58C3561589749100CA73F4 /* lae_osx.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CDAC448F158971C80054812F = {
 			isa = PBXGroup;
 			children = (
+				CD58C3461589749100CA73F4 /* lae.xcodeproj */,
 				CDAC449B158971C80054812F /* Products */,
 				CD2B64291589722600582E55 /* src */,
 			);
@@ -101,12 +139,42 @@
 			mainGroup = CDAC448F158971C80054812F;
 			productRefGroup = CDAC449B158971C80054812F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CD58C3471589749100CA73F4 /* Products */;
+					ProjectRef = CD58C3461589749100CA73F4 /* lae.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CDAC4499158971C80054812F /* riot */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CD58C3521589749100CA73F4 /* liblae.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblae.a;
+			remoteRef = CD58C3511589749100CA73F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD58C3541589749100CA73F4 /* lae_test */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = lae_test;
+			remoteRef = CD58C3531589749100CA73F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD58C3561589749100CA73F4 /* lae_osx.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = lae_osx.app;
+			remoteRef = CD58C3551589749100CA73F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDAC4496158971C80054812F /* Sources */ = {
