@@ -1,0 +1,3 @@
+[submodule "external/lae"]
+	path = external/lae
+	url = git://github.com/10n1/LAE.git
